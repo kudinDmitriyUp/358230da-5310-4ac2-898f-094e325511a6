@@ -2,7 +2,7 @@
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarStyleCentered from '@/components/navbar/NavbarStyleCentered/NavbarStyleCentered';
-import HeroShowcaseSplitOverlay from '@/components/sections/hero/HeroShowcaseSplitOverlay';
+import HeroBillboardCarouselSplit from '@/components/sections/hero/HeroBillboardCarouselSplit';
 import FeatureCardThirteen from '@/components/sections/feature/FeatureCardThirteen';
 import AboutMetric from '@/components/sections/about/AboutMetric';
 import TeamCardSeven from '@/components/sections/team/TeamCardSeven';
@@ -15,7 +15,7 @@ import { Shield, Lock, Eye, Zap } from 'lucide-react';
 export default function SecureGuardPage() {
   return (
     <ThemeProvider
-      defaultButtonVariant="bounce-effect"
+      defaultButtonVariant="text-stagger"
       defaultTextAnimation="background-highlight"
       borderRadius="pill"
       contentWidth="medium"
@@ -41,19 +41,33 @@ export default function SecureGuardPage() {
       </div>
 
       <div id="hero" data-section="hero">
-        <HeroShowcaseSplitOverlay
+        <HeroBillboardCarouselSplit
           title="Enterprise-Grade Cybersecurity Protection"
           description="Comprehensive threat detection and prevention with AI-powered monitoring, 24/7 incident response, and military-grade encryption to protect your organization from evolving threats."
-          tags={['AI-Powered', 'Enterprise Security', 'Real-Time Detection', '24/7 Protection']}
+          slides={[
+            {
+              title: "Real-Time Threat Detection",
+              description: "Advanced AI-powered monitoring that identifies and neutralizes threats instantly across your entire network infrastructure.",
+              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_32T51L3BHE8qqE8rXXWBwMZaYtk/uploaded-1765972345052-4lw07q0r.jpg",
+              imageAlt: "Threat Detection Interface"
+            },
+            {
+              title: "Endpoint Protection",
+              description: "Comprehensive endpoint security with behavioral analysis and zero-trust architecture to prevent unauthorized access.",
+              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_32T51L3BHE8qqE8rXXWBwMZaYtk/uploaded-1765972345774-2mdair28.jpg",
+              imageAlt: "Endpoint Security Dashboard"
+            },
+            {
+              title: "Data Encryption",
+              description: "Military-grade encryption for data at rest and in transit, ensuring compliance with industry standards and regulations.",
+              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_32T51L3BHE8qqE8rXXWBwMZaYtk/uploaded-1765972346562-0ahwqodm.jpg",
+              imageAlt: "Data Encryption Visualization"
+            }
+          ]}
           buttons={[
             { text: "Start Free Trial", href: "contact" },
             { text: "Schedule Demo", href: "contact" }
           ]}
-          showcaseImageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_32T51L3BHE8qqE8rXXWBwMZaYtk/uploaded-1765972345052-4lw07q0r.jpg"
-          showcaseImageAlt="Cybersecurity Protection Interface"
-          imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_32T51L3BHE8qqE8rXXWBwMZaYtk/uploaded-1765972345774-2mdair28.jpg"
-          imageAlt="Digital Security Background"
-          showDimOverlay={true}
           ariaLabel="Cybersecurity hero section with protection imagery"
         />
       </div>
@@ -64,10 +78,10 @@ export default function SecureGuardPage() {
           description="Comprehensive threat detection and prevention tailored for enterprise environments"
           tag="Protection Stack"
           features={[
-            { id: "01", title: "Real-Time Threat Detection", description: "Advanced AI-powered monitoring that identifies and neutralizes threats instantly across your entire network infrastructure.", imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_32T51L3BHE8qqE8rXXWBwMZaYtk/uploaded-1765972345052-4lw07q0r.jpg", imageAlt: "Threat Detection" },
-            { id: "02", title: "Endpoint Protection", description: "Comprehensive endpoint security with behavioral analysis and zero-trust architecture to prevent unauthorized access.", imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_32T51L3BHE8qqE8rXXWBwMZaYtk/uploaded-1765972345774-2mdair28.jpg", imageAlt: "Endpoint Security" },
-            { id: "03", title: "Data Encryption", description: "Military-grade encryption for data at rest and in transit, ensuring compliance with industry standards and regulations.", imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_32T51L3BHE8qqE8rXXWBwMZaYtk/uploaded-1765972346562-0ahwqodm.jpg", imageAlt: "Data Protection" },
-            { id: "04", title: "Incident Response", description: "24/7 security operations center with rapid response teams to contain and remediate security incidents.", imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_32T51L3BHE8qqE8rXXWBwMZaYtk/uploaded-1765972347275-hfydo3cc.jpg", imageAlt: "Incident Response" }
+            { id: "01", title: "Real-Time Threat Detection", description: "Advanced AI-powered monitoring that identifies and neutralizes threats instantly across your entire network infrastructure." },
+            { id: "02", title: "Endpoint Protection", description: "Comprehensive endpoint security with behavioral analysis and zero-trust architecture to prevent unauthorized access." },
+            { id: "03", title: "Data Encryption", description: "Military-grade encryption for data at rest and in transit, ensuring compliance with industry standards and regulations." },
+            { id: "04", title: "Incident Response", description: "24/7 security operations center with rapid response teams to contain and remediate security incidents." }
           ]}
           gridVariant="uniform-all-items-equal"
           textboxLayout="default"
