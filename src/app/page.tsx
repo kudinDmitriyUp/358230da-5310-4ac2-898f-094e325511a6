@@ -2,7 +2,7 @@
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarStyleCentered from '@/components/navbar/NavbarStyleCentered/NavbarStyleCentered';
-import HeroBillboardCarouselSplit from '@/components/sections/hero/HeroBillboardCarouselSplit';
+import HeroShowcaseSplitOverlay from '@/components/sections/hero/HeroShowcaseSplitOverlay';
 import FeatureCardThirteen from '@/components/sections/feature/FeatureCardThirteen';
 import AboutMetric from '@/components/sections/about/AboutMetric';
 import TeamCardSeven from '@/components/sections/team/TeamCardSeven';
@@ -41,33 +41,19 @@ export default function SecureGuardPage() {
       </div>
 
       <div id="hero" data-section="hero">
-        <HeroBillboardCarouselSplit
+        <HeroShowcaseSplitOverlay
           title="Enterprise-Grade Cybersecurity Protection"
           description="Comprehensive threat detection and prevention with AI-powered monitoring, 24/7 incident response, and military-grade encryption to protect your organization from evolving threats."
-          slides={[
-            {
-              title: "Real-Time Threat Detection",
-              description: "Advanced AI-powered monitoring that identifies and neutralizes threats instantly across your entire network infrastructure.",
-              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_32T51L3BHE8qqE8rXXWBwMZaYtk/uploaded-1765972345052-4lw07q0r.jpg",
-              imageAlt: "Threat Detection Interface"
-            },
-            {
-              title: "Endpoint Protection",
-              description: "Comprehensive endpoint security with behavioral analysis and zero-trust architecture to prevent unauthorized access.",
-              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_32T51L3BHE8qqE8rXXWBwMZaYtk/uploaded-1765972345774-2mdair28.jpg",
-              imageAlt: "Endpoint Security Dashboard"
-            },
-            {
-              title: "Data Encryption",
-              description: "Military-grade encryption for data at rest and in transit, ensuring compliance with industry standards and regulations.",
-              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_32T51L3BHE8qqE8rXXWBwMZaYtk/uploaded-1765972346562-0ahwqodm.jpg",
-              imageAlt: "Data Encryption Visualization"
-            }
-          ]}
+          tags={["Real-Time Detection", "AI-Powered", "24/7 Monitoring", "Enterprise Security"]}
           buttons={[
             { text: "Start Free Trial", href: "contact" },
             { text: "Schedule Demo", href: "contact" }
           ]}
+          showcaseImageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_32T51L3BHE8qqE8rXXWBwMZaYtk/uploaded-1765972345052-4lw07q0r.jpg"
+          showcaseImageAlt="Threat Detection Interface"
+          imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_32T51L3BHE8qqE8rXXWBwMZaYtk/uploaded-1765972346562-0ahwqodm.jpg"
+          imageAlt="Cybersecurity background"
+          showDimOverlay={true}
           ariaLabel="Cybersecurity hero section with protection imagery"
         />
       </div>
